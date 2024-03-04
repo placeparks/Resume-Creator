@@ -88,7 +88,7 @@ def refine_data_with_openai(user_info):
         summary_prompt = f"Create a professional summary based on the following skills: {', '.join(user_info['skills'])}."
         
         response = openai.Completion.create(
-            model="text-davinci-003",
+            model="gpt-3.5-turbo-instruct",
             prompt=summary_prompt,
             temperature=0.5,
             max_tokens=1000  # Increased the max_tokens value
